@@ -1,0 +1,31 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    {% if page == 'index' %}
+        <h1>Roulette</h1>
+        <p>Welcome to the roulette game!</p>
+        <button id="spin-button">Spin</button>
+    {% elif page == 'spin' %}
+        <h1>Roulette</h1>
+        <p>The ball landed on <span id="pocket-color">{{ color }}</span> <span id="pocket-number">{{ number }}</span>.</p>
+        <button id="play-again-button">Play again</button>
+    {% endif %}
+</body>
+</html>
